@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- entrada -->
+    <h1>Calculo de Calorias</h1>
+    <hr>
+    <br>
+    <table width="50%" border="1">
+        <tr>
+            <td>PRATO</td>
+            <td>#</td>
+            <td>SOBREMESA</td>
+            <td>#</td>
+            <td>BEBIDA</td>
+            <td>#</td>
+        </tr>
+        <tr>
+            <td>Vegetariano</td>
+            <td>1</td>
+            <td>Abacaxi</td>
+            <td>1</td>
+            <td>Chá</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Peixe</td>
+            <td>2</td>
+            <td>Sorvete diet</td>
+            <td>2</td>
+            <td>Suco de Laranja</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>Frango</td>
+            <td>3</td>
+            <td>Mouse diet</td>
+            <td>3</td>
+            <td>Suco de Melão</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Carne</td>
+            <td>4</td>
+            <td>Mouse de Chocolate</td>
+            <td>4</td>
+            <td>Refrigerante diet</td>
+            <td>4</td>
+        </tr>
+    </table>
+    <br>
+    <hr>
+    <form action="">
+        Digite o Prato (entre 1 e 4): <br>
+        <input type="text" name="" id="prato">
+        <br><br>
+        Digite a Sobremesa (entre 1 e 4): <br>
+        <input type="text" name="" id="sobremesa">
+        <br><br>
+        Digite a Bebida (entre 1 e 4): <br>
+        <input type="text" name="" id="bebida">
+        <br><br>
+        <button onclick="calcular();return false;">Calcular total de calorias</button>
+        <input type="reset" value="Limpar formulário">
+    </form>
+    <!-- processamento e saída -->
+    <script>
+        function calcular(){
+            var pratoj = parseInt(document.getElementById("prato").value);
+            var sobremesaj = parseInt(document.getElementById("sobremesa").value);
+            var bebidaj = parseInt(document.getElementById("bebida").value);
+
+            if (pratoj == 1){
+                pratojv = 180
+            } else if (pratoj == 2) {
+                pratojv = 230
+            } else if (pratoj == 3) {
+                pratojv = 250
+            } else if (pratoj == 4) {
+                pratojv = 350
+            }
+
+            if (sobremesaj == 1){
+                sobremesajv = 75
+            } else if (sobremesaj == 2) {
+                sobremesajv = 110
+            } else if (sobremesaj == 3) {
+                sobremesajv = 170
+            } else if (sobremesaj == 4) {
+                sobremesajv = 200
+            }
+
+            if (bebidaj == 1){
+                bebidajv = 20
+            } else if (bebidaj == 2) {
+                bebidajv = 70
+            } else if (bebidaj == 3) {
+                bebidajv = 100
+            } else if (bebidaj == 4) {
+                bebidajv = 65
+            }
+
+            var calculo = pratojv + sobremesajv + bebidajv;
+            alert("A refeição possui o total de "+calculo+" calorias");
+        }
+    </script>
+</body>
+</html>
